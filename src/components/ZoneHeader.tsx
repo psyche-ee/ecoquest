@@ -28,11 +28,18 @@ const ZoneHeader = ({ currentLives }: { currentLives: number }) => {
             const results = [];
             for (let i = 0; i < 3; i++) {
               if (lives > i) {
-                results.push(<img src={Heart} width={40} alt="Heart"></img>);
+                results.push(
+                  <img src={Heart} width={40} alt="Heart" key={i}></img>,
+                );
                 continue;
               }
               results.push(
-                <img src={EmptyHeart} width={40} alt="Empty Heart"></img>,
+                <img
+                  src={EmptyHeart}
+                  width={40}
+                  alt="Empty Heart"
+                  key={i}
+                ></img>,
               );
             }
             return results;

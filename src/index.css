@@ -1,5 +1,33 @@
 @import "tailwindcss";
 
+@keyframes npc-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.npc-float {
+  animation: npc-float 2.5s ease-in-out infinite;
+}
+
+@keyframes npc-think {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(-2deg);
+  }
+}
+
+.npc-think {
+  animation: npc-think 1.6s ease-in-out infinite;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
