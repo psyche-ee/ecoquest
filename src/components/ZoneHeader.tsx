@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Croco from "../assets/start/crocodile.svg";
 import Deer from "../assets/start/deer.svg";
 import Dog from "../assets/start/dog.svg";
@@ -6,8 +5,8 @@ import Elephant from "../assets/start/elephant.svg";
 import Heart from "../assets/heart.svg";
 import EmptyHeart from "../assets/emptyheart.svg";
 
-const ZoneHeader = () => {
-  const [lives, setLives] = useState<number>(3);
+const ZoneHeader = ({ currentLives }: { currentLives: number }) => {
+  const lives = currentLives;
   const character = "crocodile";
   const name = "gabriel cabije";
   const animals = {
